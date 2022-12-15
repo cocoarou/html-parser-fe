@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  // spells, spellsId
+  ul(class="spells")
+    - for(var i = 0; i < spells.length; i++) {
+      li
+        a(href="#{spellsId[i]}") #{spells[i]}
+    - }
