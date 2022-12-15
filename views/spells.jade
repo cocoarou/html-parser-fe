@@ -4,8 +4,8 @@ block content
   h1= title
   p Welcome to #{title}
   // spells, spellsId
-  ul(class="spells")
+  ul(class="list-group")
     - for(var i = 0; i < spells.length; i++) {
-      li
+      li(class="list-group-item")
         a(href="#{spellsId[i]}") #{spells[i]}
     - }
