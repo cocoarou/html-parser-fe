@@ -1,9 +1,18 @@
 extends layout
+head 
+
 
 block content
   h1= title
-  p Welcome to #{title}
   // spell
-  ul(class="spell-details")
+  ul(class="list-group")
     each value, key in spell
-        li #{key}: #{value}
+        - if(key != "originalName" && key != "damageAtSlotLevel") {
+          li(class="list-group-item") #{key}: #{value}
+        - } else if(key == "originalName") {
+
+        - } else {
+            li(class="list-group-item") damageAtSlotLevel:
+            each v, k in value
+              li(class="list-group-item") lvl #{k}: #{v}
+        - }

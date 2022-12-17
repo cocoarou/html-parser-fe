@@ -15,10 +15,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:name', function(req, res, next) {
+  console.log(`req: ${JSON.stringify(req.params)}`);
   var name = req.params.name;
   axios.get("http://localhost:8080/spells/" + name).then(response => {
     var spell = response.data.spell;
-    res.render('spell', {title: 'Spell', spell: spell});
+    res.render('spell', {title: spell.originalName, spell: spell});
   });
 })
 
