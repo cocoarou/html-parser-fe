@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --experimental-modules ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
-    "axios": "^0.21.4",
+    "axios": "^1.2.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
